@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:linear-gradient(135deg,#ff9eb5,#ff6b9d);
+
+    font-family:'Poppins',sans-serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    min-height:100vh;
+
+    padding:60px 20px;
+
+    overflow-x:hidden;
+
+}
+
+/* ===================== CONTAINER ===================== */
+
+.container{
+
+    width:750px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+    animation:muncul 1.2s ease;
+
+    position:relative;
+
+}
+
+/* ===================== JUDUL ===================== */
+
+h1{
+
+    text-align:center;
+
+    font-size:60px;
+
+    color:#ff4f87;
+
+    font-family:'Dancing Script',cursive;
+
+    margin-bottom:25px;
+
+}
+
+h2{
+
+    text-align:center;
+
+    color:#ff5d8f;
+
+    margin-bottom:20px;
+
+}
+
+/* ===================== PARAGRAF ===================== */
+
+p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#444;
+
+    text-align:justify;
+
+}
+
+/* ===================== TOMBOL ===================== */
+
+button{
+
+    display:block;
+
+    margin:45px auto 0;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4d88;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(255,77,136,.35);
+
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    background:#ff2c73;
+
+    box-shadow:0 15px 35px rgba(255,77,136,.45);
+
+}
+
+/* ===================== INPUT ===================== */
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:12px 0;
+
+    border-radius:15px;
+
+    border:2px solid #ffd1df;
+
+    font-size:18px;
+
+    outline:none;
+
+}
+
+input:focus{
+
+    border-color:#ff4d88;
+
+}
+
+/* ===================== ANIMASI HALAMAN ===================== */
+
+@keyframes muncul{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================== HATI MELAYANG ===================== */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-60px;
+
+    font-size:30px;
+
+    animation:naik 8s linear infinite;
+
+    opacity:.8;
+
+}
+
+.heart:nth-child(1){
+
+    left:10%;
+
+}
+
+.heart:nth-child(2){
+
+    left:30%;
+
+    animation-delay:2s;
+
+}
+
+.heart:nth-child(3){
+
+    left:50%;
+
+    animation-delay:4s;
+
+}
+
+.heart:nth-child(4){
+
+    left:70%;
+
+    animation-delay:6s;
+
+}
+
+.heart:nth-child(5){
+
+    left:90%;
+
+    animation-delay:1s;
+
+}
+
+@keyframes naik{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===================== RESPONSIVE HP ===================== */
+
+@media(max-width:768px){
+
+.container{
+
+    width:100%;
+
+    padding:30px;
+
+}
+
+h1{
+
+    font-size:45px;
+
+}
+
+p{
+
+    font-size:18px;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+}
+.penutup{
+    margin-top:60px;
+    padding:35px;
+    background:#ffffff;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(255,105,180,.25);
+    animation:muncul 2s;
+}
+
+.penutup p{
+    font-size:20px;
+    line-height:1.8;
+    text-align:center;
+    color:#444;
+}
+
+.penutup h2,
+.penutup h3{
+    text-align:center;
+    color:#ff4f87;
+}
+
+.signature{
+    margin-top:40px;
+    font-size:24px;
+    font-style:italic;
+    color:#ff4f87;
+}
+
+.fade-text{
+    opacity:0;
+    animation:fadeIn 3s forwards;
+    animation-delay:2s;
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
